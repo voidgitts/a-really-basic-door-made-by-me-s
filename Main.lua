@@ -24,6 +24,7 @@ prox.Triggered:Connect(function()
 			door.Position = door.Position + Vector3.new(0.1, 0, 0)
 			task.wait(0.01)
 		end
+		sound:stop()
 		oac = "Open"
 	elseif oac == "Open" then
 		sound:Play()
@@ -31,6 +32,7 @@ prox.Triggered:Connect(function()
 			door.Position = door.Position - Vector3.new(0.1, 0, 0)
 			task.wait(0.01)
 		end
+		sound:stop()
 		oac = "Closed"
 	end
 end)
